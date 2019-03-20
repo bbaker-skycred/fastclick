@@ -4,7 +4,11 @@ pipeline {
     stage('Install') {
       steps {
         sh 'yarn install'
-        sh 'yarn test'
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'make'
       }
     }
   }
